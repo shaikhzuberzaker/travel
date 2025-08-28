@@ -51,12 +51,8 @@ DATABASES = {
 # If you don't have MySQL configured, uncomment the sqlite fallback below:
 DATABASES = {
     'default': {
-    'ENGINE': 'django.db.backends.mysql',
-    'NAME': 'sample',
-    'HOST':'127.0.0.1',
-    'PORT':'3306',
-    'USER':'root',
-    'PASSWORD':'1234',
+    'ENGINE': 'django.db.backends.sqlite3',
+    'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 AUTH_PASSWORD_VALIDATORS = [
