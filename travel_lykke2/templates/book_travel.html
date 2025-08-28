@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="col-md-6 mx-auto">
+  <h3>Book: {{ travel.type }} {{ travel.source }} → {{ travel.destination }}</h3>
+  <p>Date: {{ travel.date_time|date:'M d, Y H:i' }}</p>
+  <p>Price per seat: ₹{{ travel.price }}</p>
+  <form method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn btn-success">Confirm Booking</button>
+  </form>
+</div>
+{% endblock %}
